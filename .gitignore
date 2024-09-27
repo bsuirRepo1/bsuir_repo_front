@@ -82,4 +82,3 @@ id_rsa.pub
 etc/
 **/docker-compose.yaml
 **/Dockerfile
-public/
