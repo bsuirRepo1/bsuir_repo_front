@@ -4,10 +4,10 @@ import { registerUser } from '../../services/reg.js';
 
 function RegForm(){
     const [formData, setFormData] = useState({
-        email: '',
         username: '',
+        email: '',
         password: '',
-        password_confirm: '',
+        confirmPassword: '',
     });
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -20,7 +20,7 @@ function RegForm(){
         setError(null);
         setPasswordMismatch(false);
 
-        if (formData.password !== formData.password_confirm) {
+        if (formData.password !== formData.confirmPassword) {
             setPasswordMismatch(true);
             setIsLoading(false);
             return;
@@ -52,6 +52,7 @@ function RegForm(){
             ) : (
             <form onSubmit={handleSubmit}>
                 <div className="image-container"></div>
+                <div className="vertical-border"></div>
                 <div className="form-group">
                     <input
                         type="email"
@@ -81,9 +82,9 @@ function RegForm(){
                     />
                     <input
                         type="password"
-                        name="password_confirm"
+                        name="confirmPassword"
                         placeholder="Повтор пароля"
-                        value={formData.password_confirm}
+                        value={formData.confirmPassword}
                         onChange={handleChange}
                         required
                     />
@@ -94,9 +95,9 @@ function RegForm(){
                 
                     <text> <a>Уже зарегистрирован?</a> <a id="underlined-text" href="/auth">Войти</a></text>
                 
-                    <text id = "Errors">
-                        {error && <p className = "Error">{error}</p>}
-                        {passwordMismatch && <p className = "Error">Пароли должны совпадать</p>}
+                    <text className="errors-container">
+                        {error && <p className = "error">{error}</p>}
+                        {passwordMismatch && <p className = "error">Пароли должны совпадать</p>}
                     </text>
                 </div>
             </form>
