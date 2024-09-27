@@ -1,6 +1,6 @@
-export const registerUser = async (userData) => {
+export const loginUser = async (userData) => {
     try {
-      const response = await fetch(' http://127.0.0.1:8000/api/users/register/', {
+      const response = await fetch(' http://127.0.0.1:8000/api/users/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -9,7 +9,7 @@ export const registerUser = async (userData) => {
       });
   
       if (!response.ok) {
-        throw new Error('Ошибка при регистрации');
+        throw new Error('Ошибка при авторизации');
       }
   
       const data = await response.json();

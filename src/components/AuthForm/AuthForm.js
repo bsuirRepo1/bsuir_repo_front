@@ -1,34 +1,24 @@
-import './RegForm.css';
+import './AuthForm.css';
 import React, { useState } from 'react';
-import { registerUser } from '../../services/reg.js';
+import { loginUser } from '../../services/auth.js';
 
-function RegForm(){
+function AuthForm(){
     const [formData, setFormData] = useState({
         email: '',
-        username: '',
         password: '',
-        password_confirm: '',
     });
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(false);
-    const [passwordMismatch, setPasswordMismatch] = useState(false);
 
     async function handleSubmit(e){
         e.preventDefault();
         setIsLoading(true);
         setError(null);
-        setPasswordMismatch(false);
-
-        if (formData.password !== formData.password_confirm) {
-            setPasswordMismatch(true);
-            setIsLoading(false);
-            return;
-        }
 
         try {
-            const data = await registerUser(formData);
-            console.log('Пользователь зарегистрирован:', data);
+            const data = await loginUser(formData);
+            console.log('Пользователь вошел:', data);
             setSuccess(true);
         } catch (error) {
             setError(error.message);
@@ -46,10 +36,7 @@ function RegForm(){
 
     return (
         <div className="form-container">
-            <h1>Регистрация</h1>
-            {success ? (
-                <p>Регистрация прошла успешно! Теперь вы можете <a href="/auth">войти</a>.</p>
-            ) : (
+            <h1>Авторизация</h1>
             <form onSubmit={handleSubmit}>
                 <div className="image-container"></div>
                 <div className="form-group">
@@ -62,15 +49,6 @@ function RegForm(){
                         required
                     />
                     <input
-                        type="text"
-                        name="username"
-                        placeholder="Никнейм"
-                        value={formData.username}
-                        onChange={handleChange}
-                        minLength="4"
-                        required
-                    />
-                    <input
                         type="password"
                         name="password"
                         placeholder="Пароль"
@@ -79,31 +57,20 @@ function RegForm(){
                         minLength="8"
                         required
                     />
-                    <input
-                        type="password"
-                        name="password_confirm"
-                        placeholder="Повтор пароля"
-                        value={formData.password_confirm}
-                        onChange={handleChange}
-                        required
-                    />
 
                     <button type="submit" disabled={isLoading}>
                         {isLoading ? 'Загрузка...' : 'Регистрация'}
                     </button>
                 
-                    <text> <a>Уже зарегистрирован?</a> <a id="underlined-text" href="/auth">Войти</a></text>
+                    <text> <a>Нет аккаунта?</a> <a id="underlined-text" href="/reg">Зарегистрируйтесь</a></text>
                 
                     <text id = "Errors">
-                        {error && <p className = "Error">{error}</p>}
-                        {passwordMismatch && <p className = "Error">Пароли должны совпадать</p>}
+                        {error && <p className="Error">{error}</p>}
                     </text>
                 </div>
             </form>
-            )};
-            
         </div>
     )
 }
 
-export default RegForm;
+export default AuthForm;

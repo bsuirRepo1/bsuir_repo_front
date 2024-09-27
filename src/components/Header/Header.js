@@ -16,7 +16,7 @@ function Header(){
     };
     
     const goToAuth = () => {
-        navigate('/reg');
+        navigate('/auth');
     }
 
     const goToProfile = () => {
