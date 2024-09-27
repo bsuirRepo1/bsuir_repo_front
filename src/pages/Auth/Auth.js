@@ -1,10 +1,11 @@
 import React from "react";
 import './Auth.css';
+import AuthForm from "../../components/AuthForm";
 
 function Auth() {
     return(
         <div>
-            <h1>Страница авторизации</h1>
+            <AuthForm />
         </div>
     );
 }
