@@ -4,10 +4,10 @@ import { registerUser } from '../../services/reg.js';
 
 function RegForm(){
     const [formData, setFormData] = useState({
-        username: '',
         email: '',
+        username: '',
         password: '',
-        confirmPassword: '',
+        password_confirm: '',
     });
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -20,7 +20,7 @@ function RegForm(){
         setError(null);
         setPasswordMismatch(false);
 
-        if (formData.password !== formData.confirmPassword) {
+        if (formData.password !== formData.password_confirm) {
             setPasswordMismatch(true);
             setIsLoading(false);
             return;
@@ -81,9 +81,9 @@ function RegForm(){
                     />
                     <input
                         type="password"
-                        name="confirmPassword"
+                        name="password_confirm"
                         placeholder="Повтор пароля"
-                        value={formData.confirmPassword}
+                        value={formData.password_confirm}
                         onChange={handleChange}
                         required
                     />
