@@ -92,10 +92,10 @@ function RegForm(){
                         {isLoading ? 'Загрузка...' : 'Регистрация'}
                     </button>
                 
-                    <text> <a>Уже зарегистрирован?</a> <a id="underlined-text" href="/auth">Войти</a></text>
+                    <text> Уже зарегистрирован? <a id="underlined-text" href="/auth">Войти</a></text>
                 
-                    <text id = "Errors">
-                        {error && <p className = "Error">{error}</p>}
+                    <text className="errors-container">
+                        {error && <p className = "errors">{error}</p>}
                         {passwordMismatch && <p className = "Error">Пароли должны совпадать</p>}
                     </text>
                 </div>
