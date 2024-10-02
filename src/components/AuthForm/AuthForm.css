@@ -1,0 +1,116 @@
+.auth-form{
+    margin: 50px auto;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: #213A59;
+    padding: 25px 0px 25px 0px;
+}
+
+.auth-form form{
+    display:flex;
+    justify-content: space-around;
+}
+
+.auth-form .image-container {
+    width: 20vw;
+    border: 2px solid black;
+    margin-right: 3vw;
+    margin-left: 15px;
+    text-align: center;
+}
+
+.auth-form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 5vw;
+    align-items: right;
+}
+
+.auth-form .form-group input {
+    border: none;
+    box-shadow: none;
+    margin-top: 15px;
+    width: 20vw;
+    height: 41px;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    font-family: montserrat;
+    font-size: 13px;
+    padding-left: 10px;
+    color: #031930;
+    margin-left: auto;
+}
+
+.auth-form .form-group input::placeholder {
+    color: #7d7d74;
+    font-size: 13px;
+    font-family: montserrat;
+    padding-left: 10px;
+}
+
+.auth-form .form-group button {
+    margin: 15px 0px 10px auto;
+    width: 140px;
+    height: 41px;
+    background-color: #B4D6F9;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.auth-form .form-group button:active {
+    margin: 15px 0px 10px auto;
+    width: 140px;
+    height: 41px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 5px;
+}
+
+.auth-form .form-group button, text {
+    color: #031930;
+    font-family: montserrat;
+    font-size: 13px;
+}
+
+.auth-form .form-group button:hover {
+    transform: scale(110%);
+}
+
+.auth-form .form-group button:active, text {
+    color: #031930;
+    font-family: montserrat;
+    font-size: 13px;
+}
+
+.auth-form .form-group text {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #D1DDED;
+    text-align: right;
+}
+
+.auth-form #underlined-text {
+    margin-left: auto;
+    text-decoration: underline;
+    color: #B4D6F9;
+}
+
+@media screen and (max-width: 1100px) {
+    .image-container {
+        display: none;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group input {
+        width: 88%;
+        margin-left: 5vw;
+    }
+}

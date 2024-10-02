@@ -1,14 +1,18 @@
-form {
+.reg-form{
     margin: 50px auto;
     border-radius: 10px;
     width: 55%;
+    height: 100%;
     background-color: #213A59;
-    display: flex;
-    justify-content: space-around;
     padding: 25px 0px 25px 0px;
 }
 
-.image-container {
+.reg-form form{
+    display:flex;
+    justify-content: space-around;
+}
+
+.reg-form .image-container {
     width: 100%;
     border: 2px solid black;
     margin-right: 3vw;
@@ -16,7 +20,7 @@ form {
     text-align: center;
 }
 
-.form-group {
+.reg-form .form-group {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -24,13 +28,7 @@ form {
     align-items: right;
 }
 
-form .vertical-border {
-    width: 2px;
-    height: 405px;
-    background-color: #D9D9D9;
-}
-
-.form-group input {
+.reg-form .form-group input {
     border: none;
     box-shadow: none;
     margin-top: 15px;
@@ -45,14 +43,14 @@ form .vertical-border {
     margin-left: auto;
 }
 
-.form-group input::placeholder {
+.reg-form .form-group input::placeholder {
     color: #7d7d74;
     font-size: 13px;
     font-family: montserrat;
     padding-left: 10px;
 }
 
-.form-group button {
+.reg-form .form-group button {
     margin: 15px 0px 10px auto;
     width: 140px;
     height: 41px;
@@ -63,7 +61,7 @@ form .vertical-border {
     cursor: pointer;
 }
 
-.form-group button:active {
+.reg-form .form-group button:active {
     margin: 15px 0px 10px auto;
     width: 140px;
     height: 41px;
@@ -72,23 +70,23 @@ form .vertical-border {
     border-radius: 5px;
 }
 
-.form-group button, text {
+.reg-form .form-group button, text {
     color: #031930;
     font-family: montserrat;
     font-size: 13px;
 }
 
-.form-group button:hover {
+.reg-form .form-group button:hover {
     transform: scale(110%);
 }
 
-.form-group button:active, text {
+.reg-form .form-group button:active, text {
     color: #031930;
     font-family: montserrat;
     font-size: 13px;
 }
 
-.form-group text {
+.reg-form .form-group text {
     width: 100%;
     margin-bottom: 10px;
     font-size: 13px;
@@ -96,7 +94,7 @@ form .vertical-border {
     text-align: right;
 }
 
-#underlined-text {
+.reg-form #underlined-text {
     margin-left: auto;
     text-decoration: underline;
     color: #B4D6F9;

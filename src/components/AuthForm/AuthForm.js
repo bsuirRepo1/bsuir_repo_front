@@ -37,38 +37,40 @@ function AuthForm(){
     return (
         <div className="form-container">
             <h1>Авторизация</h1>
-            <form onSubmit={handleSubmit}>
-                <div className="image-container"></div>
-                <div className="form-group">
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Пароль"
-                        value={formData.password}
-                        onChange={handleChange}
-                        minLength="8"
-                        required
-                    />
+            <div className='auth-form'>
+                <form onSubmit={handleSubmit}>
+                    <div className="image-container"></div>
+                    <div className="form-group">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Пароль"
+                            value={formData.password}
+                            onChange={handleChange}
+                            minLength="8"
+                            required
+                        />
 
-                    <button type="submit" disabled={isLoading}>
-                        {isLoading ? 'Загрузка...' : 'Регистрация'}
-                    </button>
-                
-                    <text> <a>Нет аккаунта?</a> <a id="underlined-text" href="/reg">Зарегистрируйтесь</a></text>
-                
-                    <text id = "Errors">
-                        {error && <p className="Error">{error}</p>}
-                    </text>
-                </div>
-            </form>
+                        <button type="submit" disabled={isLoading}>
+                            {isLoading ? 'Загрузка...' : 'Войти'}
+                        </button>
+                    
+                        <text> <a>Нет аккаунта?</a> <a id="underlined-text" href="/reg">Зарегистрируйтесь</a></text>
+                    
+                        <text id = "Errors">
+                            {error && <p className="Error">{error}</p>}
+                        </text>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
