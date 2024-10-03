@@ -50,6 +50,7 @@ function RegForm(){
             {success ? (
                 <p>Регистрация прошла успешно! Теперь вы можете <a href="/auth">войти</a>.</p>
             ) : (
+            <div className='reg-form'>
             <form onSubmit={handleSubmit}>
                 <div className="image-container"></div>
                 <div className="form-group">
@@ -100,6 +101,7 @@ function RegForm(){
                     </text>
                 </div>
             </form>
+            </div>
             )};
             
         </div>
