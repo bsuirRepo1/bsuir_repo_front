@@ -1,8 +1,8 @@
 import React from "react";
 import './Header.css';
 import { BsFillPersonFill } from "react-icons/bs";
-import { FiMenu } from "react-icons/fi";
 import { useNavigate } from 'react-router-dom';
+import Sidebar from "../Sidebar";
 
 function Header(){
     const navigate = useNavigate();
@@ -30,13 +30,12 @@ function Header(){
         <header>
             <div className="container">
                 <div className="logo">
-                    <FiMenu className="menu_button"/>
+                    <Sidebar />
                     <h1><button onClick={goToHome}>BsuirRepo</button></h1>
                 </div>
                 <nav className="menu">
                     <ul>
-                        <li><button onClick={goToRepos}>Репозитории</button></li>
-                        <li><button onClick={goToAbout}>Контакты</button></li>
+                        <li><button onClick={goToHome}>Главная</button></li>
                         <li><button onClick={goToAuth}>Войти</button></li>
                     </ul>
                     <div className="profile_button">
