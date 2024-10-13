@@ -9,7 +9,7 @@ export const registerUser = async (userData) => {
       });
   
       if (!response.ok) {
-        throw new Error('Ошибка при регистрации');
+        throw new Error(`Ошибка: ${response.status}`);
       }
   
       const data = await response.json();

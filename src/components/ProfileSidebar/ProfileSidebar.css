@@ -1,0 +1,87 @@
+.p-sidebar {
+    position: fixed;
+    top: 8px;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background-color: #758BA5;
+    color: white;
+    transition: right 0.3s ease;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-sizing: border-box;
+}
+
+.p-sidebar.open {
+    right: 0;
+}
+
+.p-sidebar ul {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.p-sidebar ul li {
+    padding: 5px 0;
+}
+
+.p-sidebar button {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.p-sidebar button:hover {
+    background-color: #223A59;
+    color: white;
+    border-radius: 5px;
+}
+
+.p-sidebar ul li a {
+    text-decoration: none;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.p-sidebar ul li a:hover {
+    background-color: #223A59;
+    color: white;
+    border-radius: 5px;
+}
+
+.toggle-butt {
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    align-self: center;
+    padding: 5px;
+}
+
+.close-butt {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-butt:hover {
+    opacity: 0.5;
+}
