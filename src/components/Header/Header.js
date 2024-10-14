@@ -1,6 +1,5 @@
 import React from "react";
 import './Header.css';
-import { BsFillPersonFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import Sidebar from "../Sidebar";
 import ProfileSidebar from "../ProfileSidebar";

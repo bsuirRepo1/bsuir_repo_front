@@ -1,6 +1,6 @@
 .p-sidebar {
     position: fixed;
-    top: 8px;
+    top: 0px;
     right: -300px;
     width: 250px;
     height: 100vh;
@@ -85,3 +85,7 @@
 .close-butt:hover {
     opacity: 0.5;
 }
+
+.icon {
+    padding-right: 10px;
+  }
