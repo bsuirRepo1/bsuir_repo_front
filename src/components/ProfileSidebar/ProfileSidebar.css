@@ -85,3 +85,7 @@
 .close-butt:hover {
     opacity: 0.5;
 }
+
+.icon {
+    padding-right: 10px;
+  }
