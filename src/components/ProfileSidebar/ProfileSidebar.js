@@ -42,6 +42,7 @@ const ProfileSidebar = () => {
           <li><button ><IoExitOutline className="icon"/>Выйти</button></li>
         </ul>
       </div>
+      {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
     </div>
   );
 }

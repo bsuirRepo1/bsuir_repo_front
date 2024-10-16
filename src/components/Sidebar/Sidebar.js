@@ -34,6 +34,7 @@ const Sidebar = () => {
           <li><button onClick={goToAbout}><IoCallOutline className="icon"/>Контакты</button></li>
         </ul>
       </div>
+      {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
     </div>
   );
 };

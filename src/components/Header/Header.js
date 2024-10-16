@@ -33,8 +33,8 @@ function Header(){
                     <Sidebar />
                     <h1><button onClick={goToHome}>BsuirRepo</button></h1>
                 </div>
-                <div className='profile-container'>
-                    <div><button className="sign-in-butt" onClick={goToAuth}>Войти</button></div>
+                <div className='logo'>
+                    <p><button onClick={goToAuth}>Войти</button></p>
                     <ProfileSidebar />
                 </div>
             </div>

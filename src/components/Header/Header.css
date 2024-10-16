@@ -1,7 +1,6 @@
 header {
     background-color: #223A59;
     padding: 20px 0;
-    border-radius: 0 0 15px 15px;
     margin: 0;
   }
 
@@ -25,16 +24,25 @@ header {
     padding-left: 10px;
   }
 
-  .logo h1 button {
+  .logo button {
     color: white;
     background: none;
     border: none;
     padding: 0;
-    margin: 0;
     color: inherit;
     font: inherit;
     cursor: pointer; 
     text-decoration: none;
+  }
+
+  .logo p {
+    font-size: 16px;
+    margin: 0;
+    padding-right: 5px;
+  }
+
+  .logo p button:hover {
+    opacity: 0.5;
   }
 
   .menu_button {
@@ -84,35 +92,27 @@ header {
 
   .profile-container {
     display: flex;
-    justify-content: space-between; 
     align-items: center;
-    gap: 10px;
   }
 
-  .sign-in-butt {
+  .profile-container p {
+    font-size: 24px;
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .profile-container p button{
     color: white;
     background: none;
     border: none;
     padding: 0;
-    padding: 0px;
+    margin: 0;
     color: inherit;
     font: inherit;
     cursor: pointer; 
     text-decoration: none;
   }
 
-  .sign-in-butt:hover {
-    opacity: 0.5;
-  }
-
-  .profile_button {
-    align-self: center;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 30px;
-    float: right;
-  }
-
-  .profile_button:hover {
+  .profile-container p button:hover {
     opacity: 0.5;
   }
