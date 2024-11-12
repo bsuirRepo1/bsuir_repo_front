@@ -37,6 +37,7 @@ const ProfileSidebar = ({ setIsAuth }) => {
     try {
       const data = await logout();
       console.log('Пользователь вышел:', data);
+      setIsAuth(false);
       navigate('/');
     } catch (error) {
       toast.error(`Ошибка: ${error}`, {

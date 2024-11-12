@@ -16,7 +16,6 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() { 
   const [cookies, setCookie] = useCookies(['access_token']);
   const [isAuth, setIsAuth] = useState(false); //!!cookies.access_token
-  console.log(isAuth);
   return (
     <div>
     <ToastContainer 
