@@ -1,8 +1,10 @@
 import './AuthForm.css';
 import React, { useState } from 'react';
 import { loginUser } from '../../services/auth.js';
+import { useNavigate } from 'react-router-dom';
 
-function AuthForm(){
+function AuthForm({ setIsAuth }){
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -20,6 +22,8 @@ function AuthForm(){
             const data = await loginUser(formData);
             console.log('Пользователь вошел:', data);
             setSuccess(true);
+            setIsAuth(true);
+            navigate('/profile');
         } catch (error) {
             setError(error.message);
         } finally {

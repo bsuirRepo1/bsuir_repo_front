@@ -1,0 +1,53 @@
+.confirm-reg-container {
+    margin: 50px auto;
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: #213A59;
+    padding: 25px 0px 25px 0px;
+    font: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirm-reg-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reg-form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.reg-form-group-label {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.reg-form-group-input {
+    margin-bottom: 5px;
+    font-size: 16px;
+    border-radius: 5px; 
+    padding: 5px;
+    width: 100px;
+    border: none;
+}
+
+.confirm-reg-form-submit {
+    margin-bottom: 5px;
+    font-size: 16px;
+    border-radius: 5px; 
+    padding: 5px;
+    width: 110px;
+    border: none;
+    cursor: pointer;
+    background-color: #B4D6F9; 
+}

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Sidebar from "../Sidebar";
 import ProfileSidebar from "../ProfileSidebar";
 
-function Header(){
+function Header(isAuth, { setIsAuth }){
     const navigate = useNavigate();
 
     const goToHome = () => {
@@ -34,8 +34,10 @@ function Header(){
                     <h1><button onClick={goToHome}>BsuirRepo</button></h1>
                 </div>
                 <div className='logo'>
+                    {isAuth &&
                     <p><button onClick={goToAuth}>Войти</button></p>
-                    <ProfileSidebar />
+                    }   
+                    <ProfileSidebar setIsAuth={setIsAuth}/>
                 </div>
             </div>
         </header>

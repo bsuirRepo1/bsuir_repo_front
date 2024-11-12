@@ -1,26 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useCookies } from 'react-cookie';
 import { fetchUserProfile } from '../../services/fetchUserProfile';
 import './Profile.css';
 
 function Profile() {
-    /*const [cookies] = useCookies(['access_token']); 
     const [userData, setUserData] = useState(null); 
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null); 
   
     useEffect(() => {
-      const getUserData = async () => {
-        const token = cookies.access_token;
-  
-        if (!token) {
-          setError('Токен не найден');
-          setLoading(false);
-          return;
-        }
-  
+      const getUserData = async () => { 
         try {
-          const data = await fetchUserProfile(token); 
+          const data = await fetchUserProfile(); 
           setUserData(data); 
         } catch (error) {
           setError(error.message); 
@@ -30,19 +20,19 @@ function Profile() {
       };
   
       getUserData(); 
-    }, [cookies]);
-  
+    }); 
+
     if (loading) {
       return <p>Loading...</p>; 
     }
   
     if (error) {
       return <p>Ошибка: {error}</p>; 
-    }*/
+    }
   
     return (
       <div>
-        {1 ? (
+        {userData ? (
           <div className="profile-page-container">
           <div className="profile-left">
             <img src="/photo.jpg" alt="Profile" className="profile-photo" />

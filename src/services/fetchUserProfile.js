@@ -1,4 +1,4 @@
-export const fetchUserProfile = async (token) => {
+export const fetchUserProfile = async () => {
     const url = 'http://127.0.0.1:8000/api/users/profile/'; 
   
     try {
@@ -6,7 +6,6 @@ export const fetchUserProfile = async (token) => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`, 
         },
       });
   
