@@ -1,8 +1,10 @@
 import './RegForm.css';
 import React, { useState } from 'react';
 import { registerUser } from '../../services/reg.js';
+import { useNavigate } from 'react-router-dom';
 
 function RegForm(){
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: '',
         username: '',
@@ -30,6 +32,7 @@ function RegForm(){
             const data = await registerUser(formData);
             console.log('Пользователь зарегистрирован:', data);
             setSuccess(true);
+            navigate('/confirm_reg');
         } catch (error) {
             setError(error.message);
         } finally {
@@ -47,9 +50,6 @@ function RegForm(){
     return (
         <div className="form-container">
             <h1>Регистрация</h1>
-            {success ? (
-                <p>Регистрация прошла успешно! Теперь вы можете <a href="/auth">войти</a>.</p>
-            ) : (
             <div className='reg-form'>
             <form onSubmit={handleSubmit}>
                 <div className="image-container"></div>
@@ -102,8 +102,6 @@ function RegForm(){
                 </div>
             </form>
             </div>
-            )};
-            
         </div>
     )
 }

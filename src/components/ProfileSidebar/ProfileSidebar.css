@@ -11,6 +11,7 @@
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     box-sizing: border-box;
+    z-index: 20;
 }
 
 .p-sidebar.open {
@@ -68,7 +69,6 @@
     cursor: pointer;
     font-size: 30px;
     align-self: center;
-    padding: 5px;
 }
 
 .close-butt {
